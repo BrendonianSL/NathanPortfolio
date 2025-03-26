@@ -177,7 +177,9 @@ export default function Homepage() {
                     {workflow.map((element, index) => {
                         return (
                             <div key={index} className='flex flex-col gap-(--spacing-s) border-b-2 border-dashed border-shade pb-(--spacing-m) hide'>
-                                <h3 className='text-[2rem]'>{element.number}</h3>
+                                <div className='w-fit bg-shade px-(--spacing-s) py-(--spacing-xs) rounded-lg'>
+                                    <h3 className='text-[2rem]'>{element.number}</h3>
+                                </div>
                                 <div className='flex flex-col gap-(--spacing-xs)'>
                                     <h4>{element.step}</h4>
                                     <p>{element.description}</p>
@@ -214,7 +216,9 @@ export default function Homepage() {
                         return (
                             <div key={index} className='flex flex-col justify-between items-start gap-(--spacing-s) border-b-2 pb-(--spacing-m) border-dashed border-shade md:flex-col md:items-start lg:flex-row lg:items-center mgap-(--spacing-l)'>
                                 <div className='flex flex-col gap-(--spacing-s) '>
-                                    <h3 className='text-[2rem]'>{`0${number}`}</h3>
+                                    <div className='w-fit bg-shade px-(--spacing-s) py-(--spacing-xs) rounded-lg'>
+                                        <h3 className='text-[2rem]'>{`0${number}`}</h3>
+                                    </div>
                                     <div className='flex flex-col gap-(--spacing-xs)'>
                                         <h4>{item.position}</h4>
                                         <p className='text-alt-black2 text-[.875rem]'>{item.company} | {item.duration}</p>
